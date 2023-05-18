@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { Materials } from '../pages/materials/Materials'
 import { Announcement } from '../pages/Announcement'
 import { Header } from '../pages/Header'
@@ -32,6 +32,7 @@ export const AppRoutes = () => {
           <Route path="notifications" element={<Notifications />} />
           <Route path="schedule" element={<Schedule />} />
         </Route>
+        <Route path="*" element={<Navigate to="/courses/materials" />} />
       </Routes>
       <GoBack />
     </>
